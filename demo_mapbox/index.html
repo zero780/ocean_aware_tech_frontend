@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo MapBox Ocean Aware Tech 2023 by Zero780</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div id="map"></div>
+    </div>
+
+    <script type="text/javascript">
+	    mapboxgl.accessToken = 'pk.eyJ1IjoiaGlyZW1pazMzNyIsImEiOiJjbG5jaXZieDYwNjFkMmlvYmdndXhidW5sIn0.lBlZoIQd9vfE182d_dwe0g';
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            // style: 'mapbox://styles/mapbox/light-v11',
+            center: [29.542, 45.541], // starting position
+            zoom: 5 // starting zoom
+        });
+
+        map.on('load', () => {
+            // Add a data source containing GeoJSON data. Obtained from ProtectedPlanet API
+            map.addSource('maine', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Polygon',
+                        // These coordinates outline Maine.
+                        'coordinates': [
+                            [
+                                [
+                                    29.542,
+                                    45.541
+                                ],
+                                [
+                                    29.552,
+                                    45.532
+                                ],
+                                [
+                                    29.595,
+                                    45.557
+                                ],
+                                [
+                                    29.624,
+                                    45.538
+                                ],
+                                [
+                                    29.738,
+                                    45.495
+                                ],
+                                [
+                                    29.745,
+                                    45.426
+                                ],
+                                [
+                                    29.775,
+                                    45.308
+                                ],
+                                [
+                                    29.755,
+                                    45.28
+                                ],
+                                [
+                                    29.749,
+                                    45.246
+                                ],
+                                [
+                                    29.714,
+                                    45.25
+                                ],
+                                [
+                                    29.676,
+                                    45.218
+                                ],
+                                [
+                                    29.661,
+                                    45.255
+                                ],
+                                [
+                                    29.679,
+                                    45.29
+                                ],
+                                [
+                                    29.665,
+                                    45.327
+                                ],
+                                [
+                                    29.612,
+                                    45.375
+                                ],
+                                [
+                                    29.588,
+                                    45.413
+                                ],
+                                [
+                                    29.579,
+                                    45.45
+                                ],
+                                [
+                                    29.51,
+                                    45.502
+                                ],
+                                [
+                                    29.489,
+                                    45.543
+                                ],
+                                [
+                                    29.517,
+                                    45.564
+                                ],
+                                [
+                                    29.542,
+                                    45.541
+                                ]
+                            ]
+                        ]
+                    }
+                }
+            });
+
+            // Add a new layer to visualize the polygon.
+            map.addLayer({
+                'id': 'maine',
+                'type': 'fill',
+                'source': 'maine', // reference the data source
+                'layout': {},
+                'paint': {
+                'fill-color': '#0080ff', // blue color fill
+                'fill-opacity': 0.5
+                }
+            });
+            // Add a black outline around the polygon.
+            map.addLayer({
+                'id': 'outline',
+                'type': 'line',
+                'source': 'maine',
+                'layout': {},
+                'paint': {
+                'line-color': '#000',
+                'line-width': 3
+                }
+            });
+        });
+    </script>
+</body>
+</html>
