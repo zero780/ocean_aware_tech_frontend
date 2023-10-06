@@ -1,17 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Ganamos ir a la NASA Vue.js App"/>
-  </div>
+  <v-app>
+<!--    <img alt="Vue logo" src="./assets/logo.png">-->
+<!--    <HelloWorld msg="Ganamos ir a la NASA Vue.js App"/>-->
+      <FitoplanctonCards />
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import FitoplanctonCards from "@/components/FitoplanctonCards.vue";
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld,
+    FitoplanctonCards
   }
 }
 </script>
