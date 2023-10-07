@@ -15,20 +15,10 @@
             </template>
             <template v-slot:default="dialog">
               <v-card>
-                <v-toolbar
-                  color="primary"
-                  dark
-                >
-                    <v-btn
-                      icon
-                      dark
-                      @click="dialog.value = false"
-                    >
-                      <v-icon>mdi-close</v-icon>
-                    </v-btn>
-                    <v-toolbar-title>Conoce los diferentes océanos</v-toolbar-title>
-
-                </v-toolbar>
+                <v-btn icon style="color: black; background-color: white;" class="boton-superpuesto"
+                            @click="dialog.value = false">
+                            <v-icon>mdi-close</v-icon>
+                        </v-btn>
                 <v-card-text class="p-0">
                   <div class="container-ocean-challenge-3-map">
                       <img src="@/assets/challenge-3/world-map-compressed.png" alt="world-map" class="ocean-challenge-3-map">
@@ -63,4 +53,11 @@ export default {
     .v-card__text{
         padding: 0!important;
     }
+
+    .boton-superpuesto {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+}
+
 </style>

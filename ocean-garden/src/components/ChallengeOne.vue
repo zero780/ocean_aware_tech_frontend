@@ -16,19 +16,10 @@
                 </template>
                 <template v-slot:default="dialog">
                     <v-card>
-                        <v-toolbar
-                            color="primary"
-                            dark
-                        >
-                            <v-btn
-                                icon
-                                dark
-                                @click="dialog.value = false"
-                            >
-                                <v-icon>mdi-close</v-icon>
-                            </v-btn>
-                            <v-toolbar-title>Game Cards</v-toolbar-title>
-                        </v-toolbar>
+                        <v-btn icon style="color: black; background-color: white;" class="boton-superpuesto"
+                            @click="dialog.value = false">
+                            <v-icon>mdi-close</v-icon>
+                        </v-btn>
                         <v-card-text class="p-0">
                             <div class="container-ocean-challenge-3-map">
                                 <img src="@/assets/challenge-1/fondo_cartas_v2.png" alt="world-map" class="ocean-challenge-3-map">
@@ -80,4 +71,11 @@ export default {
     margin-left: 35%;
     z-index: 1; /* Asegura que esté encima de la imagen */
 }
+
+.boton-superpuesto {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 </style>
