@@ -2,20 +2,22 @@
   <v-app>
 <!--    <img alt="Vue logo" src="./assets/logo.png">-->
 <!--    <HelloWorld msg="Ganamos ir a la NASA Vue.js App"/>-->
-      <FitoplanctonCards />
+      <OceanCarousel/>
   </v-app>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import FitoplanctonCards from "@/components/FitoplanctonCards.vue";
+// import FitoplanctonCards from "@/components/FitoplanctonCards.vue";
+import OceanCarousel from "@/components/OceanCarousel.vue";
 
 
 export default {
   name: 'App',
   components: {
     // HelloWorld,
-    FitoplanctonCards
+    // FitoplanctonCards,
+    OceanCarousel
   }
 }
 </script>
@@ -27,6 +29,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>
