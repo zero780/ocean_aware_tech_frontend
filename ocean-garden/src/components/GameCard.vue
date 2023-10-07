@@ -7,6 +7,24 @@
                 </v-card>
             </v-col>
         </v-row>
+
+        <!-- Modal para mostrar información de la pareja de cartas que hizo match -->
+        <v-dialog v-if="matchedCards[0]" v-model="showModal">
+            <v-card>
+                <v-card-title>Información de la pareja de cartas que hizo match</v-card-title>
+                <v-card-text>
+                    <!-- Muestra la información relevante de las cartas que hicieron match -->
+                    <div v-if="matchedCards">
+                        <p>Carta 1: {{ matchedCards[0].pair }}</p>
+                        <p>Carta 2: {{ matchedCards[1].pair }}</p>
+                        <!-- Agrega más información aquí según sea necesario -->
+                    </div>
+                </v-card-text>
+                <v-card-actions>
+                    <v-btn @click="closeModal">Cerrar</v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
     </v-container>
 </template>
 
@@ -24,6 +42,8 @@ export default {
             ],
             firstCard: null,
             secondCard: null,
+            showModal: false, // Controla la visibilidad del modal
+            matchedCards: [], // Almacena las cartas que hicieron match
         };
     },
     methods: {
@@ -37,6 +57,10 @@ export default {
                 if (this.firstCard.pair === this.secondCard.pair) {
                     this.firstCard.matched = true;
                     this.secondCard.matched = true;
+                    // Agrega las cartas que hicieron match al array
+                    this.matchedCards = [this.firstCard, this.secondCard];
+                    // Abre el modal
+                    this.showModal = true;
                 }
                 setTimeout(() => {
                     if (!this.firstCard.matched) {
@@ -50,6 +74,16 @@ export default {
                 }, 1000);
             }
         },
+        closeModal() {
+            // Cierra el modal y reinicia la información de las cartas que hicieron match
+            this.showModal = false;
+            if (this.matchedCards.length === 2) {
+                this.matchedCards[0] = null;
+                this.matchedCards[1] = null;
+            }
+            this.matchedCards = [];
+        }
+
     },
 };
 </script>
