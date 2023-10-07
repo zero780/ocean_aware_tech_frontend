@@ -4,7 +4,7 @@
         <v-col cols="auto">
           <v-dialog
             transition="dialog-bottom-transition"
-            max-width="1400"
+            max-width="60%"
           >
             <template v-slot:activator="{ on, attrs }">
               <v-btn

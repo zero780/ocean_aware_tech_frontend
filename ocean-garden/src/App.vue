@@ -20,7 +20,7 @@ export default {
   components: {
     // HelloWorld,
     // FitoplanctonCards
-    MainLayout
+    MainLayout,
     GameCard
   }
 }
