@@ -3,8 +3,9 @@
     <div class="ocean-challenge-3 mt-3">
         <v-col cols="auto">
             <v-dialog
+            
                 transition="dialog-bottom-transition"
-                max-width="60%"
+                max-width="70%"
             >
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn
@@ -75,7 +76,7 @@ export default {
     left: 0;
     width: 60%;
     height: 60%;
-    margin-top: 8%;
+    margin-top: 6%;
     margin-left: 35%;
     z-index: 1; /* Asegura que esté encima de la imagen */
 }
