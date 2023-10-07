@@ -3,17 +3,19 @@
         <div class="container-game-map" v-if="showMap">
             <img src="@/assets/images/super-mario-world-map.jpg" class="game-map">
         </div>
-
+        <ChallengeOne />
         <ChallengeThree />
     </div>
 </template>
 
 <script>
+import ChallengeOne from "@/components/ChallengeOne.vue";
 import ChallengeThree from "@/components/ChallengeThree.vue";
 
 export default {
     components: {
-      ChallengeThree
+        ChallengeOne,
+        ChallengeThree
     },
     data() {
         return {
