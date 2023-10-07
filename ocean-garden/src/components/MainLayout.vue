@@ -29,7 +29,7 @@
     .game-map {
         width: 100%!important; /* Allow the image to have its natural width */
         height: 100%!important; /* 100% height of container */
-        verflow-y: hidden!important;
+        overflow-y: hidden!important;
         object-fit: cover!important; /* Ensure the image covers the container */
         transform: translateX(0)!important; /* Initialize horizontal position */
         animation: scrollImage 60s linear infinite!important; /* Horizontal scrolling animation */
