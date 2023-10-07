@@ -1,11 +1,26 @@
 <template>
-    <div class="container-game-map">
-        <img src="@/assets/images/super-mario-world-map.jpg" class="game-map">
+    <div>
+        <div class="container-game-map" v-if="showMap">
+            <img src="@/assets/images/super-mario-world-map.jpg" class="game-map">
+        </div>
+
+        <ChallengeThree />
     </div>
 </template>
 
 <script>
+import ChallengeThree from "@/components/ChallengeThree.vue";
 
+export default {
+    components: {
+      ChallengeThree
+    },
+    data() {
+        return {
+            showMap: false
+        }
+    }
+}
 </script>
 
 <style>

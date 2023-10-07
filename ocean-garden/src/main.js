@@ -7,7 +7,7 @@ Vue.use(Vuetify)
 new Vue({
   vuetify: new Vuetify({
     theme: {
-      dark: true, // Puedes configurar el modo oscuro aquí
+      dark: false, // Puedes configurar el modo oscuro aquí
       themes: {
         dark: {
           primary: '#1976D2', // Colores personalizados para el modo oscuro
