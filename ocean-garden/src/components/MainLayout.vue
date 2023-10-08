@@ -1,30 +1,34 @@
 <template>
     <div>
-        <div class="container-game-map" v-if="showMap">
+        <div class="container-game-map" v-if="showMap" :style="showMapCustomStyle">
             <img src="@/assets/images/main_map.png" class="game-map">
         </div>
 
 <!--        // Pulpito-->
-        <OceanPulpito style="position: absolute; top:10%; left:4; z-index:8;" />
+        <OceanPulpito style="position: absolute; top:10%; left:4; z-index:8;" v-if="showMap" :style="showMapCustomStyle"/>
 
 <!--        // PRIMER HITO CAROUSEL 3D ISAAC-->
-        <OceanCarousel style="position: absolute; top:20%; left:16%; z-index:4;" />
+        <OceanCarousel style="position: absolute; top:20%; left:16%; z-index:4;" v-if="showMap" :style="showMapCustomStyle"/>
 
 <!--        //SEGUNDO CARTAS ENRIQUE-->
-        <ChallengeOne style="position: absolute; top: 30%; left:28%; z-index:5;" />
+        <ChallengeOne style="position: absolute; top: 30%; left:28%; z-index:5;" v-if="showMap" :style="showMapCustomStyle"/>
 
 <!--        //TERCER HITO MAPA MILTON-->
-        <ChallengeThree style="position: absolute; top:40%; left:40%; z-index:6;" />
+        <ChallengeThree style="position: absolute; top:40%; left:40%; z-index:6;" v-if="showMap" :style="showMapCustomStyle"/>
 
 <!--        //CUARTO HITO INFOGRAFIA ISAAC - MILTON-->
-        <OceanCarousel style="position: absolute; top:30%; left:52%; z-index:7;" />
+        <OceanCarousel style="position: absolute; top:30%; left:52%; z-index:7;" v-if="showMap" :style="showMapCustomStyle"/>
 
 <!--        //QUINTO HITO ESPECIES 3D EDUARDO-->
-        <ChallengeFive style="position: absolute; top: 20%; left:64%; z-index:8;" />
+        <ChallengeFive style="position: absolute; top: 20%; left:64%; z-index:8;" v-if="showMap" :style="showMapCustomStyle"/>
 
 <!--        //SEXTO HITO CERTIFICADO-->
-        <CertificadoEnd style="position: absolute; top: 10%; left:76%; z-index:9;" />
+        <CertificadoEnd style="position: absolute; top: 10%; left:76%; z-index:9;" v-if="showMap" :style="showMapCustomStyle"/>
 
+        <div class="container-game-map-2" :style="noShowMapCustomStyle" v-else>
+            <img src="@/assets/images/first_screen.png" class="game-map">
+            <v-btn @click="startGame" style="position: absolute; top: 70%; left: 47%;">Start</v-btn>
+        </div>
     </div>
 </template>
 
@@ -47,7 +51,15 @@ export default {
 },
     data() {
         return {
-            showMap: true
+            showMap: false,
+            showMapCustomStyle: '',
+            noShowMapCustomStyle: ''
+        }
+    },
+    methods: {
+        startGame(){
+            // this.showMapCustomStyle = 'display: block;'
+            this.showMap = true
         }
     }
 }
@@ -103,4 +115,9 @@ html {
 /*        overflow-y: hidden!important;*/
 /*    }*/
 /*}*/
+
+    /*.container-game-map-2{*/
+    /*    background-image: url("/src/assets/images/first_screen.png");*/
+    /*    background-size: cover;*/
+    /*}*/
 </style>
