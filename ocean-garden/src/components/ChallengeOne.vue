@@ -5,7 +5,7 @@
             <v-dialog
             
                 transition="dialog-bottom-transition"
-                max-width="70%"
+                max-width="80%"
             >
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn
@@ -65,9 +65,9 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 60%;
-    height: 60%;
-    margin-top: 6%;
+    width: 55%;
+    height: 55%;
+    margin-top: 2%;
     margin-left: 35%;
     z-index: 1; /* Asegura que esté encima de la imagen */
 }

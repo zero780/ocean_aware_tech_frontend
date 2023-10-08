@@ -2,7 +2,7 @@
     <!-- Reto 3 oceanos-->
     <div class="ocean_carousel mt-3">
         <v-col cols="auto">
-            <v-dialog transition="dialog-bottom-transition" max-width="70%">
+            <v-dialog transition="dialog-bottom-transition" max-width="80%">
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn color="primary" v-bind="attrs" v-on="on">Open Carousel</v-btn>
                 </template>
