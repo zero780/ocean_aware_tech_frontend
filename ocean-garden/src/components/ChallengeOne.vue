@@ -8,11 +8,14 @@
                 max-width="80%"
             >
                 <template v-slot:activator="{ on, attrs }">
-                    <v-btn
-                        color="primary"
+                    <img
+                        src="@/assets/images/rock-01.png"
+                        alt="Open Carousel"
                         v-bind="attrs"
                         v-on="on"
-                    >Open reto 1</v-btn>
+                        class="bobbing-image"
+                        style="width: 180px;"
+                    />
                 </template>
                 <template v-slot:default="dialog">
                     <v-card>
