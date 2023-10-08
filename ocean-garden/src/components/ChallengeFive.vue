@@ -81,4 +81,32 @@ export default {
     right: 10px;
 }
 
+@keyframes bobbing {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+        /* Move 5px up */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the image */
+.bobbing-image {
+    animation: bobbing 2s ease infinite;
+    /* Adjust the duration and easing as needed */
+}
+
+.custom-image:hover {
+    filter: contrast(150%);
+    /* Increase contrast on hover (adjust the value as needed) */
+    animation-play-state: paused;
+    /* Pause the animation on hover */
+}
+
 </style>
