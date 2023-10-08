@@ -76,6 +76,7 @@ export default {
     position: absolute;
     top: 10px;
     right: 10px;
+    z-index: 2 !important;
 }
 
 @keyframes bobbing {

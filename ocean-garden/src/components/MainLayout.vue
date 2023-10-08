@@ -4,22 +4,22 @@
             <img src="@/assets/images/main_map.png" class="game-map">
         </div>
 
-        // PRIMER HITO CAROUSEL 3D ISAAC
+<!--        // PRIMER HITO CAROUSEL 3D ISAAC-->
         <OceanCarousel style="position: absolute; top:20%; left:16%; z-index:4;" />
 
-        //SEGUNDO HITO MAPA MILTON
+<!--        //SEGUNDO HITO MAPA MILTON-->
         <ChallengeOne style="position: absolute; top: 30%; left:28%; z-index:5;" />
 
-        //TERCER HITO CARTAS ENRIQUE
+<!--        //TERCER HITO CARTAS ENRIQUE-->
         <ChallengeThree style="position: absolute; top:40%; left:40%; z-index:6;" />
 
-        //CUARTO HITO INFOGRAFIA ISAAC - MILTON
+<!--        //CUARTO HITO INFOGRAFIA ISAAC - MILTON-->
         <OceanCarousel style="position: absolute; top:30%; left:52%; z-index:7;" />
 
-        //QUINTO HITO ESPECIES 3D EDUARDO
+<!--        //QUINTO HITO ESPECIES 3D EDUARDO-->
         <ChallengeOne style="position: absolute; top: 20%; left:64%; z-index:8;" />
 
-        //SEXTO HITO CERTIFICADO
+<!--        //SEXTO HITO CERTIFICADO-->
         <ChallengeThree style="position: absolute; top: 10%; left:76%; z-index:9;" />
 
     </div>

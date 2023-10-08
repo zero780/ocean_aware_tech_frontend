@@ -12,7 +12,7 @@
         <v-dialog v-if="matchedCards[0]" v-model="showModal" max-width="60%">
             <template v-slot:default="dialog">
                 <v-card>
-                    <v-btn icon style="color: black; background-color: white;" class="boton-superpuesto"
+                    <v-btn icon style="color: black; background-color: white; z-index: 2;" class="boton-superpuesto"
                            @click="dialog.value = false">
                         <v-icon>mdi-close</v-icon>
                     </v-btn>
