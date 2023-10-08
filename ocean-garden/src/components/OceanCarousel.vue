@@ -11,6 +11,7 @@
                             v-on="on"
                             class="bobbing-image custom-image"
                             style="width: 240px;"
+                            @click="reproducirSonido"
                         />
                 </template>
                 <template v-slot:default="dialog">
@@ -76,6 +77,7 @@ export default {
     data() {
         return {
             isMounted: false,
+            rutaSonido: require("@/assets/sounds/bubbles.mp3"),
             items: [
                 {
                     title: "Card 1",
@@ -90,7 +92,14 @@ export default {
                 // Agrega más items según sea necesario
             ],
         }
-    }
+    },
+    methods: {
+        reproducirSonido() {
+            this.rutaSonido = "@/assets/sounds/bubbles.mp3";
+            var reproductor = document.getElementById("reproductor");
+            reproductor.play();
+        }
+      }
 }
 
 </script>

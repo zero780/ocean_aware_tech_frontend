@@ -14,6 +14,7 @@
                   v-on="on"
                   class="bobbing-image custom-image"
                   style="width: 240px;"
+                  @click="reproducirSonido"
               />
             </template>
             <template v-slot:default="dialog">
@@ -104,6 +105,7 @@
 export default {
     data() {
         return {
+            rutaSonido: require("@/assets/sounds/bubbles.mp3"),
             oceans: [
                 {
                     'image': require('@/assets/challenge-3/oceans/artic.jpg'),
@@ -182,6 +184,12 @@ export default {
         },
         hoverOceanMarker(newOcean){
             this.hoverOcean = newOcean
+        },
+        reproducirSonido() {
+            console.log("Holaaaa")
+            this.rutaSonido = "@/assets/sounds/bubbles.mp3";
+            var reproductor = document.getElementById("reproductor");
+            reproductor.play();
         }
     }
 }
