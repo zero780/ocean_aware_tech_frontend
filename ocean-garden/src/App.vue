@@ -4,6 +4,7 @@
 <!--    <HelloWorld msg="Ganamos ir a la NASA Vue.js App"/>-->
 <!--      <FitoplanctonCards />-->
       <MainLayout />
+<!--      <GameCard />-->
   </v-app>
 </template>
 
@@ -11,6 +12,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 // import FitoplanctonCards from "@/components/FitoplanctonCards.vue";
 import MainLayout from "@/components/MainLayout.vue";
+// import GameCard from "@/components/GameCard.vue";
 
 
 export default {
@@ -18,7 +20,8 @@ export default {
   components: {
     // HelloWorld,
     // FitoplanctonCards
-    MainLayout
+    MainLayout,
+    // GameCard
   }
 }
 </script>

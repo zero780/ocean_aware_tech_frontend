@@ -4,7 +4,7 @@
         <v-col cols="auto">
           <v-dialog
             transition="dialog-bottom-transition"
-            max-width="60%"
+            max-width="70%"
           >
             <template v-slot:activator="{ on, attrs }">
               <v-btn
@@ -15,20 +15,10 @@
             </template>
             <template v-slot:default="dialog">
               <v-card>
-                <v-toolbar
-                  color="primary"
-                  dark
-                >
-                    <v-btn
-                      icon
-                      dark
-                      @click="dialog.value = false"
-                    >
-                      <v-icon>mdi-close</v-icon>
-                    </v-btn>
-                    <v-toolbar-title>Oceans of the planet</v-toolbar-title>
-
-                </v-toolbar>
+                <v-btn icon style="color: black; background-color: white;" class="boton-superpuesto"
+                            @click="dialog.value = false">
+                            <v-icon>mdi-close</v-icon>
+                        </v-btn>
                 <v-card-text class="p-0">
                     <div class="images-container">
                         <div class="container-ocean-challenge-3-map">
@@ -207,6 +197,12 @@ export default {
 
     .v-card__text{
         padding: 0!important;
+    }
+
+    .boton-superpuesto {
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
 
     .images-container {
