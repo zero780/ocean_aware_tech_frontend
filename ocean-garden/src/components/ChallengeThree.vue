@@ -8,13 +8,13 @@
           >
             <template v-slot:activator="{ on, attrs }">
               <img
-                            src="@/assets/images/rocks-03.png"
-                            alt="Open Carousel"
-                            v-bind="attrs"
-                            v-on="on"
-                            class="bobbing-image custom-image"
-                            style="width: 240px;"
-                        />
+                  src="@/assets/images/rocks-03.png"
+                  alt="Open Carousel"
+                  v-bind="attrs"
+                  v-on="on"
+                  class="bobbing-image custom-image"
+                  style="width: 240px;"
+              />
             </template>
             <template v-slot:default="dialog">
               <v-card>
@@ -68,7 +68,7 @@
               >
 <!--                  <template v-slot:default="dialog">-->
                   <template>
-                      <v-card>
+                      <v-card style="background-color: #024e68;">
 <!--                        <v-toolbar-->
 <!--                          color="primary"-->
 <!--                          dark-->
@@ -274,11 +274,12 @@ export default {
     }
 
     .description-ocean-text p{
-        font-size: 20px!important;
+        font-size: 15px!important;
+        color: #fff
     }
 
     .vue-popover{
-        background-color: #191919!important;
+        background-color: #024e68!important;
         width: 100%;
         /*height: 300px;*/
     }
@@ -287,16 +288,20 @@ export default {
         width: 100%;
     }
 
-.notify-badge{
-    /*position: absolute;*/
-    right:-20px;
-    top:10px;
-    background:green;
-    text-align: center;
-    border-radius: 30px 30px 30px 30px;
-    color:white;
-    padding:5px 10px;
-    font-size:15px;
-    font-weight: bolder;
-}
+    .notify-badge{
+        /*position: absolute;*/
+        right:-20px;
+        top:10px;
+        background:green;
+        text-align: center;
+        border-radius: 30px 30px 30px 30px;
+        color:white;
+        padding:5px 10px;
+        font-size:15px;
+        font-weight: bolder;
+    }
+
+    .modal-media-container{
+        background-color: #024e68!important;
+    }
 </style>
