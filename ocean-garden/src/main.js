@@ -4,6 +4,9 @@ import Vuetify from 'vuetify'
 Vue.config.productionTip = false
 Vue.use(Vuetify)
 
+import Popover from 'vue-js-popover'
+Vue.use(Popover)
+
 new Vue({
   vuetify: new Vuetify({
     theme: {

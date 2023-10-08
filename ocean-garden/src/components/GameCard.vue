@@ -9,22 +9,26 @@
         </v-row>
 
         <!-- Modal para mostrar información de la pareja de cartas que hizo match -->
-        <v-dialog v-if="matchedCards[0]" v-model="showModal">
-            <v-card>
-                <v-card-title>Información de la pareja de cartas que hizo match</v-card-title>
-                <v-card-text>
-                    <!-- Muestra la información relevante de las cartas que hicieron match -->
-                    <div v-if="matchedCards">
-                        <p>Carta 1: {{ matchedCards[0].pair }}</p>
-                        <p>Carta 2: {{ matchedCards[1].pair }}</p>
-                        <!-- Agrega más información aquí según sea necesario -->
-                    </div>
-                </v-card-text>
-                <v-card-actions>
-                    <v-btn @click="closeModal">Cerrar</v-btn>
-                </v-card-actions>
-            </v-card>
+        <v-dialog v-if="matchedCards[0]" v-model="showModal" max-width="60%">
+            <template v-slot:default="dialog">
+                <v-card>
+                    <v-btn icon style="color: black; background-color: white;" class="boton-superpuesto"
+                           @click="dialog.value = false">
+                        <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                    <v-card-text class="p-0">
+                        <div class="images-container">
+                            <div class="container-ocean-challenge-3-map">
+                                <img :src="matchedCards[0].image_final" alt="world-map" class="ocean-challenge-3-map">
+                                <!-- Estilo para posicionar GameCard encima de la imagen -->
+                            </div>
+                        </div>
+
+                    </v-card-text>
+                </v-card>
+            </template>
         </v-dialog>
+
     </v-container>
 </template>
 
@@ -33,12 +37,12 @@ export default {
     data() {
         return {
             cards: [
-                { id: 'A1', image: require('@/assets/challenge-1/recurso_1.png'), pair: 'A', flipped: false, matched: false },
-                { id: 'B1', image: require('@/assets/challenge-1/recurso_2.png'), pair: 'B', flipped: false, matched: false },
-                { id: 'C1', image: require('@/assets/challenge-1/recurso_3.png'), pair: 'A', flipped: false, matched: false },
-                { id: 'A2', image: require('@/assets/challenge-1/recurso_4.png'), pair: 'C', flipped: false, matched: false },
-                { id: 'B2', image: require('@/assets/challenge-1/recurso_5.png'), pair: 'C', flipped: false, matched: false },
-                { id: 'C2', image: require('@/assets/challenge-1/recurso_6.png'), pair: 'B', flipped: false, matched: false },
+                { id: 'A1', image: require('@/assets/challenge-1/recurso_13.png'), pair: 'A', flipped: false, matched: false, image_final: require('@/assets/challenge-1/recurso_21.png') },
+                { id: 'B1', image: require('@/assets/challenge-1/recurso_15.png'), pair: 'B', flipped: false, matched: false, image_final: require('@/assets/challenge-1/recurso_19.png') },
+                { id: 'C1', image: require('@/assets/challenge-1/recurso_14.png'), pair: 'A', flipped: false, matched: false, image_final: require('@/assets/challenge-1/recurso_21.png') },
+                { id: 'A2', image: require('@/assets/challenge-1/recurso_17.png'), pair: 'C', flipped: false, matched: false, image_final: require('@/assets/challenge-1/recurso_20.png') },
+                { id: 'B2', image: require('@/assets/challenge-1/recurso_18.png'), pair: 'C', flipped: false, matched: false, image_final: require('@/assets/challenge-1/recurso_20.png') },
+                { id: 'C2', image: require('@/assets/challenge-1/recurso_16.png'), pair: 'B', flipped: false, matched: false, image_final: require('@/assets/challenge-1/recurso_19.png') },
             ],
             firstCard: null,
             secondCard: null,
@@ -101,5 +105,25 @@ export default {
 
 .custom-col {
     flex: 0 0 calc(33.333% - 16px);
+}
+
+.dialog-right {
+    right: 20%;
+}
+
+.boton-superpuesto {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.images-container {
+    position: relative;
+    width: 100%; /* Adjust the width as needed */
+}
+
+.ocean-challenge-3-map {
+    width: 100%;
+    height: 100%;
 }
 </style>
