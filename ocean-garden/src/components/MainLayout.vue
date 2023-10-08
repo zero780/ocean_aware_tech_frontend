@@ -1,25 +1,28 @@
 <template>
     <div>
         <div class="container-game-map" v-if="showMap">
-            <img src="@/assets/images/super-mario-world-map.jpg" class="game-map">
+            <img src="@/assets/images/main_map.png" class="game-map">
         </div>
-        <ChallengeOne />
-        <ChallengeThree />
+        <ChallengeOne  style="position: absolute; top: 100px; left: 100px; z-index:1;"/>
+        <ChallengeThree style="position: absolute; top:300px; left:200px; z-index:3;"/>
+        <OceanCarousel style="position: absolute; top:400px; left:300px; z-index:4;"/>
     </div>
 </template>
 
 <script>
 import ChallengeOne from "@/components/ChallengeOne.vue";
 import ChallengeThree from "@/components/ChallengeThree.vue";
+import OceanCarousel from "@/components/OceanCarousel.vue";
 
 export default {
     components: {
         ChallengeOne,
-        ChallengeThree
+        ChallengeThree,
+        OceanCarousel
     },
     data() {
         return {
-            showMap: false
+            showMap: true
         }
     }
 }
@@ -37,8 +40,8 @@ export default {
     .container-game-map {
         width: 100vw!important; /* 100% of viewport width */
         height: 100vh!important; /* 100% of viewport height */
-        overflow-x: auto!important; /* Enable horizontal scrolling */
-        overflow-y: auto!important;
+        overflow-x: false!important; /* Enable horizontal scrolling */
+        overflow-y: false!important;
         white-space: nowrap!important; /* Prevent text wrapping */
     }
 
