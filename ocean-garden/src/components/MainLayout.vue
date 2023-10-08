@@ -5,22 +5,22 @@
         </div>
 
         // PRIMER HITO CAROUSEL 3D ISAAC
-        <OceanCarousel style="position: absolute; top:160px; left:280px; z-index:4;" />
+        <OceanCarousel style="position: absolute; top:160px; left:16%; z-index:4;" />
 
         //SEGUNDO HITO MAPA MILTON
-        <ChallengeOne style="position: absolute; top: 260px; left:480px; z-index:1;" />
+        <ChallengeOne style="position: absolute; top: 260px; left:30%; z-index:5;" />
 
         //TERCER HITO CARTAS ENRIQUE
-        <ChallengeThree style="position: absolute; top:360px; left:680px; z-index:3;" />
+        <ChallengeThree style="position: absolute; top:360px; left:44%; z-index:6;" />
 
         //CUARTO HITO INFOGRAFIA ISAAC - MILTON
-        <OceanCarousel style="position: absolute; top:260px; left:880px; z-index:4;" />
+        <OceanCarousel style="position: absolute; top:260px; left:58%; z-index:7;" />
 
         //QUINTO HITO ESPECIES 3D EDUARDO
-        <ChallengeOne style="position: absolute; top: 160px; left:1080px; z-index:1;" />
+        <ChallengeOne style="position: absolute; top: 160px; left:72%; z-index:8;" />
 
         //SEXTO HITO CERTIFICADO
-        <ChallengeThree style="position: absolute; top: 60px; left:1280px; z-index:3;" />
+        <ChallengeThree style="position: absolute; top: 60px; left:96%; z-index:9;" />
 
     </div>
 </template>
