@@ -7,10 +7,10 @@
         // PRIMER HITO CAROUSEL 3D ISAAC
         <OceanCarousel style="position: absolute; top:20%; left:16%; z-index:4;" />
 
-        //SEGUNDO HITO MAPA MILTON
+        //TERCER HITO CARTAS ENRIQUE
         <ChallengeOne style="position: absolute; top: 30%; left:28%; z-index:5;" />
 
-        //TERCER HITO CARTAS ENRIQUE
+        //SEGUNDO HITO MAPA MILTON
         <ChallengeThree style="position: absolute; top:40%; left:40%; z-index:6;" />
 
         //CUARTO HITO INFOGRAFIA ISAAC - MILTON
