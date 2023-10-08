@@ -8,28 +8,30 @@
           :class="{ active: currentIndex === index }"
           :style="getSlideStyles(index)"
         >
-          <iframe 
-            title="Loggerhead Sea Turtle" 
-            frameborder="0" 
-            allowfullscreen mozallowfullscreen="true" 
-            webkitallowfullscreen="true" 
-            allow="autoplay; fullscreen; xr-spatial-tracking" 
-            xr-spatial-tracking 
-            execution-while-out-of-viewport 
-            execution-while-not-rendered 
-            web-share 
-            :src="slide.link"
-            class="iframe-content"
-          />
-          <!-- Agregar el elemento div para el título y la descripción -->
-          <div class="content">
-              <div class="title" @mouseover="showDescription(index)" @mouseout="hideDescription(index)">
-                <p class="text-h5">{{slide.title}}</p>
-              </div>
-              <div class="description" :class="{ active: descriptionIndex === index }">
-                <p class="text-body-1">
-                    {{slide.description}}
-                </p>
+          <div v-if="slide.title">
+              <iframe
+                title="Loggerhead Sea Turtle"
+                frameborder="0"
+                allowfullscreen mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                xr-spatial-tracking
+                execution-while-out-of-viewport
+                execution-while-not-rendered
+                web-share
+                :src="slide?.link"
+                class="iframe-content"
+              />
+              <!-- Agregar el elemento div para el título y la descripción -->
+              <div class="content">
+                  <div class="title" @mouseover="showDescription(index)" @mouseout="hideDescription(index)">
+                    <p class="text-h5">{{slide?.title}}</p>
+                  </div>
+                  <div class="description" :class="{ active: descriptionIndex === index }">
+                    <p class="text-body-1">
+                        {{slide?.description}}
+                    </p>
+                  </div>
               </div>
           </div>
         </div>
@@ -67,7 +69,13 @@
             {
                 "title": "Scalloped Hammerhead Juvenile",
                 "description": "Young Scalloped Hammerhead Sharks, belonging to the Sphyrna lewini species, have small hammer-shaped heads and are typically found in coastal and offshore waters. They grow in size and develop their distinctive scalloped head as they mature.",
-                "link": "https://sketchfab.com/models/f5adc17c922b48feae76aaea98552dd4/embed?camera=0" }
+                "link": "https://sketchfab.com/models/f5adc17c922b48feae76aaea98552dd4/embed?camera=0" 
+            },
+            {
+                "title": null,
+                "description": null,
+                "link": null 
+            }
         ]
       };
     },
@@ -102,7 +110,7 @@
         this.descriptionIndex = index;
       },
       // Oculta la descripción al quitar el hover en el título
-      hideDescription(index) {
+      hideDescription() {
         this.descriptionIndex = null;
       },
     },

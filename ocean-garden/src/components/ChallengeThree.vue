@@ -18,10 +18,10 @@
             </template>
             <template v-slot:default="dialog">
               <v-card>
-                <v-btn icon style="color: black; background-color: white;" class="boton-superpuesto"
-                    @click="dialog.value = false">
-                    <v-icon>mdi-close</v-icon>
-                </v-btn>
+                <v-btn icon style="color: black; background-color: white; z-index:2;" class="boton-superpuesto"
+                            @click="dialog.value = false">
+                            <v-icon>mdi-close</v-icon>
+                        </v-btn>
                 <v-card-text class="p-0">
                     <div class="images-container">
                         <div class="container-ocean-challenge-3-map">

@@ -3,13 +3,13 @@
     <div class="ocean-challenge-3 mt-3">
         <v-col cols="auto">
             <v-dialog
-
+            
                 transition="dialog-bottom-transition"
                 max-width="80%"
             >
                 <template v-slot:activator="{ on, attrs }">
                     <img
-                            src="@/assets/images/rocks-02.png"
+                            src="@/assets/images/rocks-06.png"
                             alt="Open Carousel"
                             v-bind="attrs"
                             v-on="on"
@@ -25,9 +25,8 @@
                         </v-btn>
                         <v-card-text class="p-0">
                             <div class="container-ocean-challenge-3-map">
-                                <img src="@/assets/challenge-1/fondo_cartas_v2.png" alt="world-map" class="ocean-challenge-3-map">
-                                <!-- Estilo para posicionar GameCard encima de la imagen -->
-                                <GameCard class="game-card-overlay"></GameCard>
+                                <img src="@/assets/images/certificado.png" alt="world-map" class="ocean-challenge-3-map">
+
                             </div>
                         </v-card-text>
                     </v-card>
@@ -38,10 +37,10 @@
 </template>
 
 <script>
-import GameCard from "@/components/GameCard.vue";
+
 export default {
     components: {
-        GameCard,
+
     },
     data() {
         return {};
@@ -76,7 +75,6 @@ export default {
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 2 !important;
 }
 
 @keyframes bobbing {
@@ -106,4 +104,5 @@ export default {
     animation-play-state: paused;
     /* Pause the animation on hover */
 }
+
 </style>

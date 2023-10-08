@@ -4,23 +4,23 @@
             <img src="@/assets/images/main_map.png" class="game-map">
         </div>
 
-        // PRIMER HITO CAROUSEL 3D ISAAC
+<!--        // PRIMER HITO CAROUSEL 3D ISAAC-->
         <OceanCarousel style="position: absolute; top:20%; left:16%; z-index:4;" />
 
-        //TERCER HITO CARTAS ENRIQUE
+<!--        //SEGUNDO HITO MAPA MILTON-->
         <ChallengeOne style="position: absolute; top: 30%; left:28%; z-index:5;" />
 
-        //SEGUNDO HITO MAPA MILTON
+<!--        //TERCER HITO CARTAS ENRIQUE-->
         <ChallengeThree style="position: absolute; top:40%; left:40%; z-index:6;" />
 
-        //CUARTO HITO INFOGRAFIA ISAAC - MILTON
+<!--        //CUARTO HITO INFOGRAFIA ISAAC - MILTON-->
         <OceanCarousel style="position: absolute; top:30%; left:52%; z-index:7;" />
 
-        //QUINTO HITO ESPECIES 3D EDUARDO
+<!--        //QUINTO HITO ESPECIES 3D EDUARDO-->
         <ChallengeFive style="position: absolute; top: 20%; left:64%; z-index:8;" />
 
-        //SEXTO HITO CERTIFICADO
-        <ChallengeThree style="position: absolute; top: 10%; left:76%; z-index:9;" />
+<!--        //SEXTO HITO CERTIFICADO-->
+        <CertificadoEnd style="position: absolute; top: 10%; left:76%; z-index:9;" />
 
     </div>
 </template>
@@ -30,14 +30,16 @@ import ChallengeOne from "@/components/ChallengeOne.vue";
 import ChallengeThree from "@/components/ChallengeThree.vue";
 import ChallengeFive from "@/components/ChallengeFive.vue";
 import OceanCarousel from "@/components/OceanCarousel.vue";
+import CertificadoEnd from "./CertificadoEnd.vue";
 
 export default {
     components: {
-        ChallengeOne,
-        ChallengeThree,
-        ChallengeFive,
-        OceanCarousel
-    },
+    ChallengeOne,
+    ChallengeThree,
+    ChallengeFive,
+    OceanCarousel,
+    CertificadoEnd
+},
     data() {
         return {
             showMap: true
