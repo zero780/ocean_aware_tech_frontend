@@ -4,7 +4,7 @@
             <img src="@/assets/images/main_map.png" class="game-map">
         </div>
         <ChallengeOne  style="position: absolute; top: 100px; left: 100px; z-index:1;"/>
-        <ChallengeThree style="position: absolute; top:300px; left:200px; z-index:3;"/>
+        <ChallengeThree style="position: absolute; top:250px; left:200px; z-index:3;"/>
         <OceanCarousel style="position: absolute; top:400px; left:300px; z-index:4;"/>
     </div>
 </template>

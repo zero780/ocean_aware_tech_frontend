@@ -60,7 +60,7 @@ export default {
 
 
   mounted() {
-    
+
     setTimeout(() => {
         // Realiza cambios en el DOM aquí, por ejemplo, cambiar la altura de un elemento.
         const carouselContainer = document.getElementById('miCarousel');
