@@ -17,7 +17,7 @@
         <OceanCarousel style="position: absolute; top:30%; left:52%; z-index:7;" />
 
         <!-- QUINTO HITO ESPECIES 3D EDUARDO -->
-        <ChallengeOne style="position: absolute; top: 20%; left:64%; z-index:8;" />
+        <ChallengeFive style="position: absolute; top: 20%; left:64%; z-index:8;" />
 
         <!-- SEXTO HITO CERTIFICADO -->
         <CertificadoEnd style="position: absolute; top: 10%; left:76%; z-index:9;" />
@@ -28,6 +28,7 @@
 <script>
 import ChallengeOne from "@/components/ChallengeOne.vue";
 import ChallengeThree from "@/components/ChallengeThree.vue";
+import ChallengeFive from "@/components/ChallengeFive.vue";
 import OceanCarousel from "@/components/OceanCarousel.vue";
 import CertificadoEnd from "./CertificadoEnd.vue";
 
@@ -35,6 +36,7 @@ export default {
     components: {
     ChallengeOne,
     ChallengeThree,
+        ChallengeFive,
     OceanCarousel,
     CertificadoEnd
 },

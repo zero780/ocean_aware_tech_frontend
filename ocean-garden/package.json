@@ -1,5 +1,5 @@
 {
-  "name": "ocean-garden",
+  "name": "ocean_aware_tech",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -36,7 +36,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "warn"
+    }
   },
   "browserslist": [
     "> 1%",
