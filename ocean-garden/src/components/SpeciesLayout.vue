@@ -100,7 +100,7 @@
     align-items: center; /* Centra verticalmente */
     height: 100%; /* Altura completa de la pantalla */
     width: 100%;
-    background-image: url("/src/assets/images/fondo_principal.png");
+    background-image: url("/src/assets/images/main_map.png");
     background-size: cover; 
   }
   
@@ -124,8 +124,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 800px; /* Ajusta el ancho según tus necesidades */
-    height: 600px; /* Ajusta la altura según tus necesidades */
+    width: 40vw; /* Ajusta el ancho según tus necesidades */
+    height: 50vh; /* Ajusta la altura según tus necesidades */
   }
 
   .content {
@@ -162,6 +162,7 @@
     bottom: 10px; /* Ajusta la distancia desde la parte inferior */
     left: 100px; /* Ajusta la distancia desde la izquierda */
     background-color: #002333; /* Fondo semitransparente */
+    font-size: 2rem;
     color: white; /* Color del texto */
     padding: 5px 10px; /* Relleno del texto */
     border-radius: 5px; /* Borde redondeado */
