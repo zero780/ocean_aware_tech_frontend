@@ -18,17 +18,17 @@
             execution-while-out-of-viewport 
             execution-while-not-rendered 
             web-share 
-            src="https://sketchfab.com/models/c438e81e796d41d9a6ae4cc147ef8d4f/embed?camera=0"
+            :src="slide.link"
             class="iframe-content"
           />
           <!-- Agregar el elemento div para el título y la descripción -->
           <div class="content">
               <div class="title" @mouseover="showDescription(index)" @mouseout="hideDescription(index)">
-                <p class="text-h5">Tortuga Marina</p>
+                <p class="text-h5">{{slide.title}}</p>
               </div>
               <div class="description" :class="{ active: descriptionIndex === index }">
                 <p class="text-body-1">
-                    Las tortugas marinas son reptiles marinos que han adaptado su vida al océano. Existen siete especies diferentes de tortugas marinas, cada una con sus propias características, pero comparten algunas características clave. Son conocidas por su caparazón duro y escamoso que les brinda protección. Las tortugas marinas son animales migratorios que viajan largas distancias entre sus áreas de alimentación y sus lugares de anidación.
+                    {{slide.description}}
                 </p>
               </div>
           </div>
@@ -43,7 +43,32 @@
       return {
         currentIndex: 0,
         descriptionIndex: null, // Índice de la descripción activa
-        slides: ["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5"],
+       slides: [
+            {
+                "title": "Loggerhead Sea Turtle",
+                "description": "The Loggerhead Sea Turtle (Caretta caretta) is a large marine turtle known for its reddish-brown shell. It plays a crucial role in the marine ecosystem by helping control jellyfish populations, thus maintaining the balance of marine life.",
+                "link": "https://sketchfab.com/models/c438e81e796d41d9a6ae4cc147ef8d4f/embed?camera=0"               
+            },
+            {
+                "title": "Green Sea Turtle",
+                "description": "The Green Sea Turtle is named for the greenish color of its fat and skin. They are known for their herbivorous diet, primarily consisting of seagrasses and algae. Green Sea Turtles are found in tropical and subtropical waters and are known for their distinctive heart-shaped shells and graceful swimming. They are classified as endangered and are protected under conservation efforts worldwide.",
+                "link": "https://sketchfab.com/models/c12909c5b64943d6a11a9f2e3dded93e/embed?camera=0" 
+            },
+            {
+                "title": "Bottlenose Dolphin",
+                "description": "The Common Bottlenose Dolphin is the most well-known dolphin species, recognized for its distinctive bottle-shaped snout and playful behavior. They inhabit warm and temperate waters worldwide, and their high intelligence and social nature have made them iconic symbols of dolphins in popular culture.",
+                "link": "https://sketchfab.com/models/41f9da2e89d94b34a9ee1bee4faad21f/embed?camera=0" 
+            },
+            {
+                "title": "Hammerhead Shark",
+                "description": "The Hammerhead Shark is known for its distinctively shaped head, which is flattened and resembles a hammer. These sharks are found in warm waters globally and are top predators, primarily feeding on fish and small marine creatures.",
+                "link": "https://sketchfab.com/models/f26c18e58e144679bb6ac4026c8fc8b7/embed?camera=0" 
+            },
+            {
+                "title": "Scalloped Hammerhead Juvenile",
+                "description": "Young Scalloped Hammerhead Sharks, belonging to the Sphyrna lewini species, have small hammer-shaped heads and are typically found in coastal and offshore waters. They grow in size and develop their distinctive scalloped head as they mature.",
+                "link": "https://sketchfab.com/models/f5adc17c922b48feae76aaea98552dd4/embed?camera=0" }
+        ]
       };
     },
     computed: {
