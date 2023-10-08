@@ -1,6 +1,9 @@
 <template>
     <!-- Reto 3 oceanos-->
     <div class="ocean-challenge-3 mt-3">
+        <audio id="reproductor" preload="auto">
+            <source :src="rutaSonido" type="audio/mpeg">
+        </audio>
         <v-col cols="auto">
             <v-dialog
 
@@ -15,6 +18,7 @@
                             v-on="on"
                             class="bobbing-image custom-image"
                             style="width: 240px;"
+                            @click="reproducirSonido"
                         />
                 </template>
                 <template v-slot:default="dialog">
@@ -35,6 +39,7 @@
             </v-dialog>
         </v-col>
     </div>
+    
 </template>
 
 <script>
@@ -44,8 +49,17 @@ export default {
         GameCard,
     },
     data() {
-        return {};
+        return {
+            rutaSonido: require("@/assets/sounds/bubbles.mp3")
+        };
     },
+    methods: {
+        reproducirSonido() {
+            this.rutaSonido = "@/assets/sounds/bubbles.mp3";
+            var reproductor = document.getElementById("reproductor");
+            reproductor.play();
+        }
+      }
 };
 </script>
 

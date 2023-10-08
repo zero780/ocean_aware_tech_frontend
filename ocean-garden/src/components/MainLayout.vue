@@ -1,5 +1,8 @@
 <template>
     <div>
+        <audio autoplay loop>
+        <source src="@/assets/sounds/beach-sound.mp3" type="audio/mpeg">Tu navegador no admite la reproducción de audio.
+        </audio>
         <div class="container-game-map" v-if="showMap" :style="showMapCustomStyle">
             <img src="@/assets/images/main_map.png" class="game-map">
         </div>
