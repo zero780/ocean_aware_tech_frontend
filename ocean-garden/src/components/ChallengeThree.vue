@@ -36,7 +36,7 @@
                         </div>
 
                         <div class="ocean-image" :style="item.style" v-for="item in oceans" :key="item.index">
-                            <img :src="item.image" alt="ocean" @click="showDialogOcean(item)">
+                            <img :src="item.marker" alt="ocean" @click="showDialogOcean(item)">
                         </div>
 
 <!--                        <div class="artic-image ocean-image" style="right: 100px; top: 100px;">-->
@@ -110,50 +110,58 @@ export default {
                 {
                     'image': require('@/assets/challenge-3/oceans/artic.jpg'),
                     'name': 'Ice Highway',
-                    'description': 'Sea water off the east coast of Greenland looked a bit like marbled paper in October 2012.',
+                    'description': 'Sea water off the east coast of Greenland looked a bit like marbled paper.',
                     'media': require('@/assets/challenge-3/oceans/artic.gif'),
-                    'style': 'right: 100px; top: 100px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker.png')
+                    'style': 'right: 440px; top: 100px;',
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/south-america.jpg'),
                     'name': 'Chilean Phytoplankton Bloom',
-                    'description': 'Phytoplankton bloom off the coast of Chile in this Suomi-NPP/VIIRS image collected on October 5, 2013.',
-                    'media': require('@/assets/challenge-3/oceans/artic.gif'),
-                    'style': 'right: 520px; top: 490px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker.png')
+                    'description': 'Phytoplankton bloom off the coast of Chile in this Suomi-NPP/VIIRS.',
+                    'media': require('@/assets/challenge-3/oceans/south-america.gif'),
+                    'style': 'right: 560px; top: 490px;',
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/pacific-north.jpg'),
                     'name': 'Central American Upwelling',
-                    'description': 'Winds flowing across topographic low points of Mexico and Central America drive upwelling in the gulfs of Tehuantepec, Papagayo, and Panama. This upwelling brings nutrients to the surface waters thereby fueling phytoplankton growth in this part of the Pacific Ocean.',
-                    'media': require('@/assets/challenge-3/oceans/artic.gif'),
-                    'style': 'right: 520px; top: 390px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker.png')
+                    'description': 'Winds flowing across topographic low points of Mexico and Central America drive upwelling in the gulfs of Tehuantepec, Papagayo, and Panama.',
+                    'media': require('@/assets/challenge-3/oceans/pacific-north.gif'),
+                    'style': 'right: 630px; top: 390px;',
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/japan.png'),
                     'name': 'Oyashio Blooms',
-                    'description': 'Divers phytoplankton communities lend their different colors to the southern end of the Oyashio Current during the spring bloom. The bands of color in this 21 May 2009 MODIS image of the Pacific east of Japan highlightthe eddy field that forms where that southwestward flowing current turns to the east -- eventually joining with the Kuroshio Current to become the North Pacific Current. Sun glint obscuresthe southwestern corner of this image while aerosols from Asia obscure the northeastern corner.',
-                    'media': require('@/assets/challenge-3/oceans/artic.gif'),
-                    'style': 'right: 150px; top: 300px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker.png')
+                    'description': 'Divers phytoplankton communities lend their different colors to the southern end of the Oyashio Current during the spring bloom.',
+                    'media': require('@/assets/challenge-3/oceans/japan.gif'),
+                    'style': 'right: 30px; top: 310px;',
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/indian.jpg'),
                     'name': 'Indian Ocean Spring',
                     'description': 'Were it not for satellite ocean color sensors and periodic breaks in cloud cover over the southwestern Indian Ocean, we humans would have little idea of the complex dance of the photosynthesizing phytoplankton that is constantly playing out on that remote stage.',
-                    'media': require('@/assets/challenge-3/oceans/artic.gif'),
-                    'style': 'right: -130px; top: 420px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker.png')
+                    'media': require('@/assets/challenge-3/oceans/indian.gif'),
+                    'style': 'right: 190px; top: 450px;',
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/atlantic.jpg'),
                     'name': 'North Atlantic Spring Bloom',
-                    'description': 'This view of Iceland and the North Atlantic Ocean to its southwest shows the spring phytoplankton bloom near its peak. ',
-                    'media': require('@/assets/challenge-3/oceans/artic.gif'),
-                    'style': 'right: 170px; top: 270px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker.png')
+                    'description': 'This view of Iceland and the North Atlantic Ocean to its southwest shows the spring phytoplankton bloom near its peak.',
+                    'media': require('@/assets/challenge-3/oceans/atlantic.gif'),
+                    'style': 'right: 450px; top: 280px;',
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
+                },
+                {
+                    'image': require('@/assets/challenge-3/oceans/fiji.jpg'),
+                    'name': 'Fiji Archipelago',
+                    'description': 'It is unusual for completely clear skies over Fiji to coincide with the overpass of one of the MODIS sensors',
+                    'media': require('@/assets/challenge-3/oceans/fiji.gif'),
+                    'style': 'right: -100px; top: 420px;',
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
                 },
             ],
             activeOcean: null,
@@ -195,7 +203,7 @@ export default {
     }
 
     .ocean-image img{
-        width: 14%;
+        width: 11%;
         /*width: auto; height: 100%; margin-left: -50px;*/
         border-radius: 10%;
 
