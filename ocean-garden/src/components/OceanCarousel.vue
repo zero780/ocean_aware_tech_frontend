@@ -4,7 +4,14 @@
         <v-col cols="auto">
             <v-dialog transition="dialog-bottom-transition" max-width="80%">
                 <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="primary" v-bind="attrs" v-on="on">Open Carousel</v-btn>
+                    <img
+                            src="@/assets/images/rock-01.png"
+                            alt="Open Carousel"
+                            v-bind="attrs"
+                            v-on="on"
+                            class="bobbing-image"
+                            style="width: 180px;"
+                        />
                 </template>
                 <template v-slot:default="dialog">
                     <v-card>
@@ -131,6 +138,25 @@ export default {
     justify-content: center;
     align-items: center;
 }
+
+/* Create a keyframes animation for the bobbing effect */
+@keyframes bobbing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move 5px up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the image */
+.bobbing-image {
+  animation: bobbing 2s ease infinite; /* Adjust the duration and easing as needed */
+}
+
 
 
 </style>
