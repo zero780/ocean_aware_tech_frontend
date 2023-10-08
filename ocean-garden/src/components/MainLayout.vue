@@ -20,7 +20,7 @@
         <ChallengeFive style="position: absolute; top: 20%; left:64%; z-index:8;" />
 
 <!--        //SEXTO HITO CERTIFICADO-->
-        <ChallengeThree style="position: absolute; top: 10%; left:76%; z-index:9;" />
+        <CertificadoEnd style="position: absolute; top: 10%; left:76%; z-index:9;" />
 
     </div>
 </template>
