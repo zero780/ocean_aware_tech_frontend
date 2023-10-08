@@ -228,14 +228,26 @@ export default {
     }
 
     .ocean-image img.marker {
-      -webkit-transform: rotate(0) scale(1);
-      transform: rotate(0) scale(1);
+        -webkit-transform: rotate(0) scale(1);
+        transform: rotate(0) scale(1);
+        animation: pulse 1s infinite;
+        border-radius: 50%;
     }
     .ocean-image:hover img.marker {
       -webkit-transform: rotate(15deg) scale(1.4);
       transform: rotate(15deg) scale(1.4);
       -webkit-transition: .3s ease-in-out;
       transition: .3s ease-in-out;
+    }
+
+    @keyframes pulse{
+        from{
+          box-shadow: 0 0 0 0 rgba(198, 182, 179, 0.85);
+        }
+
+        to{
+          box-shadow: 0 0 0 30px rgba(201, 48, 48, 0);
+        }
     }
 
     .description-ocean-text p{
