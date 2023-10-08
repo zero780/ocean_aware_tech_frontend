@@ -36,8 +36,13 @@
                         </div>
 
                         <div class="ocean-image" :style="item.style" v-for="item in oceans" :key="item.index">
-                            <img :src="item.marker" alt="ocean" @click="showDialogOcean(item)">
+                            <span class="notify-badge" v-if="!item.visited">Visit</span>
+                            <img :src="item.marker" alt="ocean" @click="showDialogOcean(item)" v-popover:popoverOceanImage class="marker" @mouseenter="hoverOceanMarker(item)">
                         </div>
+                        <popover name="popoverOceanImage" event="hover" v-if="hoverOcean">
+                            <img :src="hoverOcean.image">
+                        </popover>
+
 
 <!--                        <div class="artic-image ocean-image" style="right: 100px; top: 100px;">-->
 <!--                            <img src="@/assets/challenge-3/oceans/artic.jpg" alt="artic ocean" @click="showDialogOcean">-->
@@ -113,7 +118,8 @@ export default {
                     'description': 'Sea water off the east coast of Greenland looked a bit like marbled paper.',
                     'media': require('@/assets/challenge-3/oceans/artic.gif'),
                     'style': 'right: 440px; top: 100px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png'),
+                    'visited': false
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/south-america.jpg'),
@@ -121,7 +127,8 @@ export default {
                     'description': 'Phytoplankton bloom off the coast of Chile in this Suomi-NPP/VIIRS.',
                     'media': require('@/assets/challenge-3/oceans/south-america.gif'),
                     'style': 'right: 560px; top: 490px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png'),
+                    'visited': false
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/pacific-north.jpg'),
@@ -129,7 +136,8 @@ export default {
                     'description': 'Winds flowing across topographic low points of Mexico and Central America drive upwelling in the gulfs of Tehuantepec, Papagayo, and Panama.',
                     'media': require('@/assets/challenge-3/oceans/pacific-north.gif'),
                     'style': 'right: 630px; top: 390px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png'),
+                    'visited': false
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/japan.png'),
@@ -137,7 +145,8 @@ export default {
                     'description': 'Divers phytoplankton communities lend their different colors to the southern end of the Oyashio Current during the spring bloom.',
                     'media': require('@/assets/challenge-3/oceans/japan.gif'),
                     'style': 'right: 30px; top: 310px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png'),
+                    'visited': false
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/indian.jpg'),
@@ -145,7 +154,8 @@ export default {
                     'description': 'Were it not for satellite ocean color sensors and periodic breaks in cloud cover over the southwestern Indian Ocean, we humans would have little idea of the complex dance of the photosynthesizing phytoplankton that is constantly playing out on that remote stage.',
                     'media': require('@/assets/challenge-3/oceans/indian.gif'),
                     'style': 'right: 190px; top: 450px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png'),
+                    'visited': false
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/atlantic.jpg'),
@@ -153,7 +163,8 @@ export default {
                     'description': 'This view of Iceland and the North Atlantic Ocean to its southwest shows the spring phytoplankton bloom near its peak.',
                     'media': require('@/assets/challenge-3/oceans/atlantic.gif'),
                     'style': 'right: 450px; top: 280px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png'),
+                    'visited': false
                 },
                 {
                     'image': require('@/assets/challenge-3/oceans/fiji.jpg'),
@@ -161,17 +172,23 @@ export default {
                     'description': 'It is unusual for completely clear skies over Fiji to coincide with the overpass of one of the MODIS sensors',
                     'media': require('@/assets/challenge-3/oceans/fiji.gif'),
                     'style': 'right: -100px; top: 420px;',
-                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png')
+                    'marker': require('@/assets/challenge-3/oceans/ocean-marker-2.png'),
+                    'visited': false
                 },
             ],
             activeOcean: null,
             activeOceanDialog: false,
+            hoverOcean: null
         }
     },
     methods:{
         showDialogOcean(newOcean){
             this.activeOcean = newOcean
+            newOcean.visited = true
             this.activeOceanDialog = true
+        },
+        hoverOceanMarker(newOcean){
+            this.hoverOcean = newOcean
         }
     }
 }
@@ -206,15 +223,15 @@ export default {
         width: 11%;
         /*width: auto; height: 100%; margin-left: -50px;*/
         border-radius: 10%;
-
+        cursor: pointer;
         /*border-top-left-radius: 50% 50%; border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%;*/
     }
 
-    .ocean-image img {
+    .ocean-image img.marker {
       -webkit-transform: rotate(0) scale(1);
       transform: rotate(0) scale(1);
     }
-    .ocean-image:hover img {
+    .ocean-image:hover img.marker {
       -webkit-transform: rotate(15deg) scale(1.4);
       transform: rotate(15deg) scale(1.4);
       -webkit-transition: .3s ease-in-out;
@@ -224,4 +241,27 @@ export default {
     .description-ocean-text p{
         font-size: 20px!important;
     }
+
+    .vue-popover{
+        background-color: #191919!important;
+        width: 100%;
+        /*height: 300px;*/
+    }
+
+    .vue-popover img{
+        width: 100%;
+    }
+
+.notify-badge{
+    /*position: absolute;*/
+    right:-20px;
+    top:10px;
+    background:green;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color:white;
+    padding:5px 10px;
+    font-size:15px;
+    font-weight: bolder;
+}
 </style>
