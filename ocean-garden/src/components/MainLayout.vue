@@ -36,7 +36,7 @@ export default {
     components: {
     ChallengeOne,
     ChallengeThree,
-        ChallengeFive,
+    ChallengeFive,
     OceanCarousel,
     CertificadoEnd
 },

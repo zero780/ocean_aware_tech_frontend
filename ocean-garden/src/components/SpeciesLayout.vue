@@ -102,7 +102,7 @@
         this.descriptionIndex = index;
       },
       // Oculta la descripción al quitar el hover en el título
-      hideDescription(index) {
+      hideDescription() {
         this.descriptionIndex = null;
       },
     },
