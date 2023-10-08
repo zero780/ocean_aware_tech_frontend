@@ -17,7 +17,7 @@
         <ChallengeThree style="position: absolute; top:40%; left:40%; z-index:6;" v-if="showMap" :style="showMapCustomStyle"/>
 
 <!--        //CUARTO HITO INFOGRAFIA ISAAC - MILTON-->
-        <OceanCarousel style="position: absolute; top:30%; left:52%; z-index:7;" v-if="showMap" :style="showMapCustomStyle"/>
+        <ChallengeFour style="position: absolute; top:30%; left:52%; z-index:7;" v-if="showMap" :style="showMapCustomStyle"/>
 
 <!--        //QUINTO HITO ESPECIES 3D EDUARDO-->
         <ChallengeFive style="position: absolute; top: 20%; left:64%; z-index:8;" v-if="showMap" :style="showMapCustomStyle"/>
@@ -39,9 +39,11 @@ import ChallengeFive from "@/components/ChallengeFive.vue";
 import OceanCarousel from "@/components/OceanCarousel.vue";
 import CertificadoEnd from "@/components/CertificadoEnd.vue";
 import OceanPulpito from "@/components/OceanPulpito.vue";
+import ChallengeFour from "@/components/ChallengeFour.vue";
 
 export default {
     components: {
+    ChallengeFour,
     ChallengeOne,
     ChallengeThree,
     ChallengeFive,
