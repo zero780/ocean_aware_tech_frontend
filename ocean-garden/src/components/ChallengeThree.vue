@@ -17,11 +17,11 @@
               />
             </template>
             <template v-slot:default="dialog">
-              <v-card class="modal-media-container">
+              <v-card>
                 <v-btn icon style="color: black; background-color: white;" class="boton-superpuesto"
-                            @click="dialog.value = false">
-                            <v-icon>mdi-close</v-icon>
-                        </v-btn>
+                    @click="dialog.value = false">
+                    <v-icon>mdi-close</v-icon>
+                </v-btn>
                 <v-card-text class="p-0">
                     <div class="images-container">
                         <div class="container-ocean-challenge-3-map">
@@ -68,7 +68,7 @@
               >
 <!--                  <template v-slot:default="dialog">-->
                   <template>
-                      <v-card>
+                      <v-card style="background-color: #024e68;">
 <!--                        <v-toolbar-->
 <!--                          color="primary"-->
 <!--                          dark-->
@@ -274,7 +274,8 @@ export default {
     }
 
     .description-ocean-text p{
-        font-size: 18px!important;
+        font-size: 15px!important;
+        color: #fff
     }
 
     .vue-popover{

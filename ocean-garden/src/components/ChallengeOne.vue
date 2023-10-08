@@ -3,7 +3,7 @@
     <div class="ocean-challenge-3 mt-3">
         <v-col cols="auto">
             <v-dialog
-            
+
                 transition="dialog-bottom-transition"
                 max-width="80%"
             >
@@ -105,5 +105,4 @@ export default {
     animation-play-state: paused;
     /* Pause the animation on hover */
 }
-
 </style>
