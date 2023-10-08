@@ -24,7 +24,7 @@
                                 <img src="@/assets/ocean_carousel/fondo_modal.png" alt="fondo_modal"
                                     class="ocean_carousel-map">
                                     <div class="card-overlay">
-                                    <carousel-3d perspective=20 autoplay=1 display=5 width=640 height=500 space=260 >
+                                    <carousel-3d perspective=20 display=5 width=640 height=500 space=260 >
                                     <slide :index="0" style="border: 4px solid #afd9ef;">
                                         <img src="@/assets/ocean_carousel/historia_escena_1.png" alt="welcome1">
                                     </slide>

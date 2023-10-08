@@ -4,6 +4,9 @@
             <img src="@/assets/images/main_map.png" class="game-map">
         </div>
 
+<!--        // Pulpito-->
+        <OceanPulpito style="position: absolute; top:10%; left:4; z-index:8;" />
+
 <!--        // PRIMER HITO CAROUSEL 3D ISAAC-->
         <OceanCarousel style="position: absolute; top:20%; left:16%; z-index:4;" />
 
@@ -30,7 +33,8 @@ import ChallengeOne from "@/components/ChallengeOne.vue";
 import ChallengeThree from "@/components/ChallengeThree.vue";
 import ChallengeFive from "@/components/ChallengeFive.vue";
 import OceanCarousel from "@/components/OceanCarousel.vue";
-import CertificadoEnd from "./CertificadoEnd.vue";
+import CertificadoEnd from "@/components/CertificadoEnd.vue";
+import OceanPulpito from "@/components/OceanPulpito.vue";
 
 export default {
     components: {
@@ -38,7 +42,8 @@ export default {
     ChallengeThree,
     ChallengeFive,
     OceanCarousel,
-    CertificadoEnd
+    CertificadoEnd,
+    OceanPulpito
 },
     data() {
         return {
