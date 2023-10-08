@@ -28,12 +28,14 @@
 <script>
 import ChallengeOne from "@/components/ChallengeOne.vue";
 import ChallengeThree from "@/components/ChallengeThree.vue";
+import ChallengeFive from "@/components/ChallengeFive.vue";
 import OceanCarousel from "@/components/OceanCarousel.vue";
 
 export default {
     components: {
         ChallengeOne,
         ChallengeThree,
+        ChallengeFive,
         OceanCarousel
     },
     data() {
