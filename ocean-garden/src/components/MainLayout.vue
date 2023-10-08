@@ -30,7 +30,7 @@
 
         <div class="container-game-map-2" :style="noShowMapCustomStyle" v-else>
             <img src="@/assets/images/first_screen.png" class="game-map">
-            <v-btn @click="startGame" style="position: absolute; top: 70%; left: 47%;">Start</v-btn>
+            <v-btn id="start-button" @click="startGame" style="position: absolute; top: 70%; left: 47%;">Start</v-btn>
         </div>
     </div>
 </template>
@@ -112,6 +112,19 @@ html {
     animation: scrollImage 60s linear infinite !important;
     /* Horizontal scrolling animation */
 }
+
+#start-button{
+    background-color: #F8B532;
+    font-size: 30px;
+    height: 10%;
+    width: 10%;
+}
+
+#start-button:hover{
+    background-color: #C67B2A
+}
+
+
 
 /*@media (max-width: 600px) {*/
 /*     .game-map {*/
