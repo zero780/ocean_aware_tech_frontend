@@ -101,9 +101,6 @@ export default {
     height: 100%;
 }
 
-.v-dialog {
-    overflow-y: hidden;
-}
 
 .v-card__text {
     padding: 0 !important;
