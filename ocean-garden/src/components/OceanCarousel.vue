@@ -24,15 +24,15 @@
                                 <img src="@/assets/ocean_carousel/fondo_modal.png" alt="fondo_modal"
                                     class="ocean_carousel-map">
                                     <div class="card-overlay">
-                                    <carousel-3d perspective=20 autoplay=1 display=5 width=640 height=500 space=260>
-                                    <slide :index="0">
-                                        Slide 0 Content
+                                    <carousel-3d perspective=20 autoplay=1 display=5 width=640 height=500 space=260 >
+                                    <slide :index="0" style="border: 4px solid #afd9ef;">
+                                        <img src="@/assets/ocean_carousel/historia_escena_1.png" alt="welcome1">
                                     </slide>
-                                    <slide :index="1">
-                                        Slide 1 Content
+                                    <slide :index="1" style="border: 4px solid #afd9ef;">
+                                        <img src="@/assets/ocean_carousel/historia_escena_2.png" alt="welcome2">
                                     </slide>
-                                    <slide :index="2">
-                                        Slide 2 Content
+                                    <slide :index="2" style="border: 4px solid #afd9ef;">
+                                        <img src="@/assets/ocean_carousel/historia_escena_3.png" alt="welcome3">
                                     </slide>
                                     </carousel-3d>
                                 </div>

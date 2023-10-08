@@ -30,14 +30,16 @@ import ChallengeOne from "@/components/ChallengeOne.vue";
 import ChallengeThree from "@/components/ChallengeThree.vue";
 import ChallengeFive from "@/components/ChallengeFive.vue";
 import OceanCarousel from "@/components/OceanCarousel.vue";
+import CertificadoEnd from "./CertificadoEnd.vue";
 
 export default {
     components: {
-        ChallengeOne,
-        ChallengeThree,
-        ChallengeFive,
-        OceanCarousel
-    },
+    ChallengeOne,
+    ChallengeThree,
+    ChallengeFive,
+    OceanCarousel,
+    CertificadoEnd
+},
     data() {
         return {
             showMap: true
