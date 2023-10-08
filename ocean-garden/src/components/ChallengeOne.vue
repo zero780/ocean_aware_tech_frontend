@@ -8,11 +8,14 @@
                 max-width="80%"
             >
                 <template v-slot:activator="{ on, attrs }">
-                    <v-btn
-                        color="primary"
-                        v-bind="attrs"
-                        v-on="on"
-                    >Open reto 1</v-btn>
+                    <img
+                            src="@/assets/images/rocks-02.png"
+                            alt="Open Carousel"
+                            v-bind="attrs"
+                            v-on="on"
+                            class="bobbing-image custom-image"
+                            style="width: 240px;"
+                        />
                 </template>
                 <template v-slot:default="dialog">
                     <v-card>
@@ -46,7 +49,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .ocean-challenge-3-map {
     width: 100%;
     height: 100%;
@@ -76,6 +79,34 @@ export default {
     position: absolute;
     top: 10px;
     right: 10px;
+}
+
+@keyframes bobbing {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+        /* Move 5px up */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the image */
+.bobbing-image {
+    animation: bobbing 2s ease infinite;
+    /* Adjust the duration and easing as needed */
+}
+
+.custom-image:hover {
+    filter: contrast(150%);
+    /* Increase contrast on hover (adjust the value as needed) */
+    animation-play-state: paused;
+    /* Pause the animation on hover */
 }
 
 </style>

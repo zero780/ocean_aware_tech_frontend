@@ -5,12 +5,12 @@
             <v-dialog transition="dialog-bottom-transition" max-width="80%">
                 <template v-slot:activator="{ on, attrs }">
                     <img
-                            src="@/assets/images/rock-01.png"
+                            src="@/assets/images/rocks-01.png"
                             alt="Open Carousel"
                             v-bind="attrs"
                             v-on="on"
-                            class="bobbing-image"
-                            style="width: 180px;"
+                            class="bobbing-image custom-image"
+                            style="width: 240px;"
                         />
                 </template>
                 <template v-slot:default="dialog">
@@ -24,7 +24,7 @@
                                 <img src="@/assets/ocean_carousel/fondo_modal.png" alt="fondo_modal"
                                     class="ocean_carousel-map">
                                     <div class="card-overlay">
-                                    <carousel-3d perspective=20 display=5 width=640 height=500 space=200>
+                                    <carousel-3d perspective=20 autoplay=1 display=5 width=640 height=500 space=260>
                                     <slide :index="0">
                                         Slide 0 Content
                                     </slide>
@@ -33,12 +33,6 @@
                                     </slide>
                                     <slide :index="2">
                                         Slide 2 Content
-                                    </slide>
-                                    <slide :index="3">
-                                        Slide 3 Content
-                                    </slide>
-                                    <slide :index="4">
-                                        Slide 4 Content
                                     </slide>
                                     </carousel-3d>
                                 </div>
@@ -101,7 +95,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .ocean_carousel-map {
     width: 100%;
     height: 100%;
@@ -139,24 +133,32 @@ export default {
     align-items: center;
 }
 
-/* Create a keyframes animation for the bobbing effect */
 @keyframes bobbing {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* Move 5px up */
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(15px);
+        /* Move 5px up */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Apply the animation to the image */
 .bobbing-image {
-  animation: bobbing 2s ease infinite; /* Adjust the duration and easing as needed */
+    animation: bobbing 2s ease infinite;
+    /* Adjust the duration and easing as needed */
 }
 
-
+.custom-image:hover {
+    filter: contrast(150%);
+    /* Increase contrast on hover (adjust the value as needed) */
+    animation-play-state: paused;
+    /* Pause the animation on hover */
+}
 
 </style>
